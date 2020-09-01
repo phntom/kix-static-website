@@ -49,12 +49,10 @@ ingress:
     - host: kix.co.il
       paths:
         - /
-    - host: www.kix.co.il
-      paths:
-        - /
   tls:
     - secretName: kix-static-tls
       hosts:
+        - kix.co.il
         - www.kix.co.il
 
 resources: {}
