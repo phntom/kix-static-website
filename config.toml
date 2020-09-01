@@ -1,0 +1,87 @@
+baseURL = "https://kix.co.il/"
+languageCode = "en-us"
+title = "kix"
+theme = "pulp"
+canonifyurls = true
+hasCJKLanguage = true
+
+[markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+    author = "Anton"
+    avatar = "avatar.jpg"
+    avatarDescription = "Kix Shoe"
+    favicon = "favicon.ico"
+    description = """
+        Website comming soon...
+    """
+    publicationYear = "2020"
+    listPageDateFormat = "January, 2006"
+    # See https://gohugo.io/functions/format/
+    singlePageDateFormat = "January 2, 2006"
+    # custom_css = ["/css/custom.css"]
+    # custom_js = ["/js/custom.js"]
+
+[outputs]
+    section = ["JSON", "HTML"]
+    term = ["JSON", "HTML"]
+
+[build]
+    publish = "public"
+    command = "hugo --gc --minify"
+
+[context.production.environment]
+    HUGO_VERSION = "0.74.3"
+    HUGO_ENV = "production"
+    HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+    command = "hugo --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+    HUGO_VERSION = "0.74.3"
+    HUGO_ENV = "production"
+
+[context.deploy-preview]
+    command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+    HUGO_VERSION = "0.74.3"
+
+[context.branch-deploy]
+    command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+    HUGO_VERSION = "0.74.3"
+
+[context.next.environment]
+    HUGO_ENABLEGITINFO = "true"
+
+#[[menu.main]]
+#    identifier = "blog"
+#    # name = "Blog"
+#    pre = "<i class='fa fa-book-open fa-lg'></i>"
+#    url = "/blog/"
+#    weight = 10
+
+[[menu.main]]
+    identifier = "chat"
+    # name = "Chat"
+    pre = "<i class='fas fa-comments fa-lg'></i>"
+    url = "https://web.nix.co.il/chat/#binaryvision"
+    weight = 20
+
+[[menu.main]]
+    identifier = "github"
+    # name = "GitHub"
+    pre = "<i class='fab fa-github fa-lg'></i>"
+    url = "https://github.com/phntom"
+    weight = 30
+
+[[menu.main]]
+    identifier = "email"
+    # name = "Email"
+    pre = "<i class='fa fa-envelope fa-lg'></i>"
+    url = "mailto:phantom@kix.co.il"
+    weight = 40
