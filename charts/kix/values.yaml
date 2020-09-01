@@ -1,4 +1,4 @@
-# Default values for binaryvision-static-wordpress.
+# Default values for kix-static-wordpress.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -6,9 +6,9 @@ replicaCount: 1
 
 image:
   repository: phntom/kix-static-website
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
