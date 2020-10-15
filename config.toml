@@ -1,4 +1,4 @@
-baseURL = "https://kix.co.il/"
+baseURL = "https://kix.co.il/blog/"
 languageCode = "en-us"
 title = "kix"
 theme = "pulp"
@@ -9,12 +9,12 @@ hasCJKLanguage = true
     unsafe = true
 
 [params]
-    author = "Anton"
+    author = "kix chat"
     avatar = "avatar.jpg"
-    avatarDescription = "Kix Shoe"
+    avatarDescription = "kix chat shoe"
     favicon = "favicon.ico"
     description = """
-        Website comming soon...
+       nix.co.il community is back, click the chat icon below to join using our new platform!
     """
     publicationYear = "2020"
     listPageDateFormat = "January, 2006"
@@ -69,7 +69,7 @@ hasCJKLanguage = true
     identifier = "chat"
     # name = "Chat"
     pre = "<i class='fas fa-comments fa-lg'></i>"
-    url = "https://web.nix.co.il/chat/#binaryvision"
+    url = "https://web.nix.co.il/chat/"
     weight = 20
 
 [[menu.main]]
@@ -80,8 +80,8 @@ hasCJKLanguage = true
     weight = 30
 
 [[menu.main]]
-    identifier = "email"
-    # name = "Email"
-    pre = "<i class='fa fa-envelope fa-lg'></i>"
-    url = "mailto:phantom@kix.co.il"
+    identifier = "support"
+    # name = "Support"
+    pre = "<i class='fa fa-question-circle fa-lg'></i>"
+    url = "https://kix.co.il/support/"
     weight = 40
